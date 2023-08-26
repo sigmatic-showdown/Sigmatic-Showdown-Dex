@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
+const express = require('express');
+const app = express();
+
 const fs = require('fs');
 const showdown = require('showdown');
 const converter = new showdown.Converter({
@@ -20,7 +23,7 @@ process.stdout.write("Generating articles... ");
 const files = fs.readdirSync('../articles/');
 // const template = '' + fs.readFileSync('template.html');
 
-const searchIndex = require('../../play.pokemonshowdown.com/data/search-index.js').BattleSearchIndex;
+const searchIndex = require('../../sigmatic-showdown.win:8080/data/search-index.js').BattleSearchIndex;
 const searchIndexTable = {};
 for (const [id, type, more] of searchIndex) {
 	if (more) continue;

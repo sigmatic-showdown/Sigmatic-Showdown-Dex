@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+
+	<meta charset="utf-8" />
+
+	<title>Pok&eacute;dex - Pok&eacute;mon Showdown</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
+	<link rel="stylesheet" href="//sigmatic-showdown.win:8080/style/font-awesome.css" />
+	<link rel="stylesheet" href="/theme/panels.css?2c7af7b2" />
+	<link rel="stylesheet" href="/theme/main.css?361f09ce" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="//sigmatic-showdown.win:8080/style/utilichart.css?0.09020166764168702" />
+	<link rel="stylesheet" href="/theme/pokedex.css?e2eab6c6" />
+
+	<!-- Workarounds for IE bugs to display trees correctly. -->
+	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
+	<!--[if IE 7]><style> li.tree { zoom: 1; } </style><![endif]-->
+
+</head><body>
+
+	<div class="pfx-topbar">
+		<div class="header">
+			<ul class="nav">
+				<!-- Comment out the Home button code -->
+				<!-- <li><a class="button nav-first" href="//sigmatic-showdown.win:8080/testclient.html"><img src="/images/pokemonshowdownbeta.png" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li> -->
+				<li><img src="/images/pokemonshowdownbeta.png" alt="Pok&eacute;mon Showdown! (beta)" /> </li>
+				<li><a class="button nav-last" href="https://discord.gg/Bqyec3a7uX">Discord</a></li>
+			</ul>
+			<ul class="nav nav-play">
+				<li><a class="button greenbutton nav-first nav-last" href="http://sigmatic-showdown.win:8080/testclient.html">Play</a></li>
+			</ul>
+			<div style="clear:both"></div>
+		</div>
+	</div>	
+	<div class="pfx-panel"><div class="pfx-body">
+		<form class="pokedex">
+			<h1>
+				<a href="/">Pok&eacute;dex</a>
+			</h1>
+			<ul class="tabbar centered" style="margin-bottom: 18px"><li><button class="button nav-first cur" value="">Search</button></li><li><button class="button" value="pokemon/">Pokémon</button></li><li><button class="button nav-last" value="moves/">Moves</button></li></ul>
+			<div class="searchboxwrapper">
+				<input class="textbox searchbox" type="search" name="q" value="<?php echo @$_REQUEST['q'] ?>" autocomplete="off" autofocus placeholder="Search Pok&eacute;mon, moves, abilities, items, types, or more" />
+			</div>
+			<noscript><p>
+				<strong>Requires JavaScript!</strong>
+			</p></noscript>
+			<p class="buttonbar">
+				<button type="submit" class="button"><strong>Pok&eacute;dex Search</strong></button> <button onclick="alert(['That\'s pretty cool.','Your mom\'s feeling lucky.','I see.','If you feel lucky for more than four hours, perhaps you should see a doctor.'][Math.floor(Math.random()*4)]); return false" class="button">I'm Feeling Lucky</button>
+			</p>
+		</form>
+		<div class="results">
+		</div>
+		<noscript><p>
+			<strong>Requires JavaScript!</strong>
+		</p></noscript>
+		<p>
+			Loading...
+		</p>
+	</div></div>
+	<script src="/js/lib/jquery-1.12.4.min.js"></script>
+	<script src="/js/lib/lodash.min.js"></script>
+	<script src="/js/lib/backbone-min.js"></script>
+	<script src="/js/panels.js?c88b9ee7"></script>
+
+	<script src="//sigmatic-showdown.win:8080/config/config.js?0.927447902731797"></script>
+	<script src="//sigmatic-showdown.win:8080/js/battledata.js?0.7285948051429889"></script>
+	<script src="//sigmatic-showdown.win:8080/data/search-index.js?0.7632580495205965"></script>
+	<script src="//sigmatic-showdown.win:8080/data/pokedex.js?0.33241464801686393"></script>
+	<script src="//sigmatic-showdown.win:8080/data/teambuilder-tables.js?0.5935395963310579"></script>
+	<script src="//sigmatic-showdown.win:8080/data/learnsets.js?0.6909944350162924"></script>
+	<script src="//sigmatic-showdown.win:8080/data/moves.js?0.40351286547179477"></script>
+	<script src="//sigmatic-showdown.win:8080/data/abilities.js?0.7982751261192049"></script>
+	<script src="//sigmatic-showdown.win:8080/data/items.js?0.8460807146324776"></script>
+	<script src="//sigmatic-showdown.win:8080/data/formats-data.js?0.43188494179677006"></script>
+	<script src="//sigmatic-showdown.win:8080/data/typechart.js?0.37199257742395875"></script>
+	<script src="//sigmatic-showdown.win:8080/data/aliases.js?0.39851264268157593"></script>
+	<script src="//sigmatic-showdown.win:8080/js/battle-dex-search.js?0.6986754591970545"></script>
+	<script src="//sigmatic-showdown.win:8080/js/search.js?0.6323806593342245"></script>
+	<script src="/js/pokedex.js?0e1a5f7c"></script>
+	<script src="/js/pokedex-pokemon.js?1dbccb0c"></script>
+	<script src="/js/pokedex-moves.js?6de071cb"></script>
+	<script src="/js/pokedex-search.js?2c241570"></script>
+	<script src="/js/router.js?78d91e03"></script>
+
+</body></html>
