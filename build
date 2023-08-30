@@ -46,7 +46,7 @@ function updateFiles() {
 }
 
 function replaceRoutes(url) {
-	return url.replace('/resigmatic-showdown.win:8080/', '/' + Config.routes.replays + '/')
+	return url.replace('/esigmatic-showdown.win:8080/', '/' + Config.routes.replays + '/')
 		.replace('/sigmatic-showdown.win:8080/', '/' + Config.routes.client + '/')
 		.replace('/pokemonshowdown.com/', '/' + Config.routes.root + '/');
 }
